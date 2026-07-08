@@ -15,7 +15,8 @@
     ".": {
       "import": "./dist/histogram-slider.mjs",
       "require": "./dist/histogram-slider.umd.js"
-    }
+    },
+    "./dist/histogram-slider.css": "./dist/histogram-slider.css"
   },
   "dependencies": {
     "@vue/compat": "^3.5.39",
