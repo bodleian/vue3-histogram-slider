@@ -3,15 +3,15 @@
   "version": "0.4.15",
   "description": "Range slider with histogram for Vue 3",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --name histogram-slider --entry ./src/lib/HistogramSlider.vue --target lib",
-    "lint": "vue-cli-service lint",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
     "prepare": "yarn build",
     "prepublishOnly": "yarn lint && yarn build"
   },
   "main": "dist/histogram-slider.umd.min.js",
   "dependencies": {
-    "@vue/compat": "^3.1.0",
+    "@vue/compat": "^3.5.39",
     "core-js": "^3.6.5",
     "d3-array": "^3.2.4",
     "d3-brush": "^3.0.0",
@@ -19,20 +19,20 @@
     "d3-selection": "^3.0.0",
     "d3-transition": "^3.0.1",
     "jquery": "3.5",
-    "vue": "^3.1.0"
+    "vue": "3.5.39"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.13",
-    "@vue/cli-plugin-eslint": "~4.5.13",
-    "@vue/cli-service": "~4.5.13",
+    "@vitejs/plugin-vue": "^6.0.7",
     "@vue/compiler-sfc": "^3.1.0",
     "@vue/eslint-config-prettier": "^6.0.0",
+    "autoprefixer": "^10.5.2",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^8.1.5",
-    "prettier": "^2.2.1"
+    "eslint": "^9.39.2",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^9.33.0",
+    "lint-staged": "^17.0.8",
+    "prettier": "^2.2.1",
+    "vite": "^8.1.2"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -55,5 +55,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/phedone/vue3-histogram-slider.git"
+  },
+  "engines": {
+    "node": "24.18.0",
+    "npm": ">=11.10.0"
   }
 }

@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import HistogramSlider from './lib/HistogramSlider'
+import HistogramSlider from './lib/HistogramSlider.vue'
 export default {
   data() {
     return {
@@ -55,7 +55,8 @@ export default {
   },
 
   methods: {
-    finish(val) {}
+    // this seems to be for debugging and does nothing
+    finish() {}
   },
 
   components: {
