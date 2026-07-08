@@ -18,7 +18,7 @@
 </template>
 
 <script>
-let $ = require('jquery')
+import $ from 'jquery'
 import './range-slider'
 import props from './props'
 import { nextTick } from 'vue'

@@ -10,8 +10,10 @@
 // Released under MIT licence:
 // http://ionden.com/a/plugins/licence-en.html
 // =====================================================================================================================
+import $ from 'jquery'
 
-var jQuery = require('jquery')
+window.$ = $
+window.jQuery = $
 
 ;(function(factory) {
   if ((typeof jQuery === 'undefined' || !jQuery) && typeof define === 'function' && define.amd) {
@@ -19,7 +21,7 @@ var jQuery = require('jquery')
       return factory(jQuery, document, window, navigator)
     })
   } else if ((typeof jQuery === 'undefined' || !jQuery) && typeof exports === 'object') {
-    factory(require('jquery'), document, window, navigator)
+    factory(jQuery, document, window, navigator)
   } else {
     factory(jQuery, document, window, navigator)
   }

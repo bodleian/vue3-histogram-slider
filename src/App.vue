@@ -40,10 +40,11 @@
 
 <script>
 import HistogramSlider from './lib/HistogramSlider.vue'
+import data from '../resources/data.json'
 export default {
   data() {
     return {
-      data: require('../resources/data.json').map((d) => new Date(d).valueOf()),
+      data: data.map((d) => new Date(d).valueOf()),
       prettify: function (ts) {
         return new Date(ts).toLocaleDateString('en', {
           year: 'numeric',

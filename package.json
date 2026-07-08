@@ -9,7 +9,14 @@
     "prepare": "yarn build",
     "prepublishOnly": "yarn lint && yarn build"
   },
-  "main": "dist/histogram-slider.mjs",
+  "main": "./dist/histogram-slider.umd.js",
+  "module": "./dist/histogram-slider.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/histogram-slider.mjs",
+      "require": "./dist/histogram-slider.umd.js"
+    }
+  },
   "dependencies": {
     "@vue/compat": "^3.5.39",
     "core-js": "^3.6.5",
