@@ -39,11 +39,12 @@
 </template>
 
 <script>
-import HistogramSlider from './lib/HistogramSlider'
+import HistogramSlider from './lib/HistogramSlider.vue'
+import data from '../resources/data.json'
 export default {
   data() {
     return {
-      data: require('../resources/data.json').map((d) => new Date(d).valueOf()),
+      data: data.map((d) => new Date(d).valueOf()),
       prettify: function (ts) {
         return new Date(ts).toLocaleDateString('en', {
           year: 'numeric',
@@ -55,7 +56,8 @@ export default {
   },
 
   methods: {
-    finish(val) {}
+    // this seems to be for debugging and does nothing
+    finish() {}
   },
 
   components: {

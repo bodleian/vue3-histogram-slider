@@ -12,13 +12,13 @@
       </defs>
     </svg>
     <div class="slider-wrapper">
-      <input type="text" :id="histogramId" :name="histogramId" value="" />
+      <input type="text" :id="histogramId" :name="histogramId" value="" aria-hidden="true"/>
     </div>
   </div>
 </template>
 
 <script>
-let $ = require('jquery')
+import $ from 'jquery'
 import './range-slider'
 import props from './props'
 import { nextTick } from 'vue'
@@ -201,8 +201,8 @@ export default {
       }
 
       if (this.clip) {
-        brush = d3Brush.brushX().on('end', () => {
-          let extent = d3Select.event.selection
+        brush = d3Brush.brushX().on('end', (event) => {
+          const extent = event.selection
           if (extent) {
             let domain = [x.invert(extent[0]), x.invert(extent[1])]
             x.domain(domain)
